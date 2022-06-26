@@ -1,0 +1,7 @@
+name: WardenDrops
+version: '${project.version}'
+main: com.arr4nn.wardendrops.WardenDrops
+api-version: 1.19
+authors: [ ARR4NN ]
+description: A plugin to drop some items when the warden is killed
+website: arr4nn.com

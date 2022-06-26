@@ -11,6 +11,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Random;
+
 public class PluginEvents implements Listener {
   static WardenDrops plugin;
 
@@ -23,10 +25,16 @@ public class PluginEvents implements Listener {
     Entity e = event.getEntity();
     Location loc = e.getLocation();
     if (e.getType() == EntityType.WARDEN){
-      //plugin.getLogger().info("Warden died at "+loc.getX()+", "+loc.getY()+", "+loc.getZ());
-      ItemStack itemStack1 = new ItemStack(Material.NETHERITE_INGOT);
+      // Netherite ingot 50% chance
+      // Golden Apple 100% chance
+
+      Random random = new Random();
+      if (random.nextBoolean()) {
+        ItemStack itemStack1 = new ItemStack(Material.NETHERITE_INGOT);
+        loc.getWorld().dropItemNaturally(loc, itemStack1);
+        // (50% of the time)
+      }
       ItemStack itemStack2 = new ItemStack(Material.ENCHANTED_GOLDEN_APPLE);
-      loc.getWorld().dropItemNaturally(loc, itemStack1);
       loc.getWorld().dropItemNaturally(loc, itemStack2);
     }
   }

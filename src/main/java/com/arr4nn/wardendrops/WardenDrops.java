@@ -7,7 +7,6 @@ public final class WardenDrops extends JavaPlugin {
 
   @Override
   public void onEnable() {
-    // Plugin startup
     getServer().getPluginManager().registerEvents(new PluginEvents(this),this);
     getLogger().info("Plugin has started and is ready to drop stuff.");
     getLogger().info("-------------------");

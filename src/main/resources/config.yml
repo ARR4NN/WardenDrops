@@ -1,0 +1,15 @@
+# This determines whether drops will be dropped on regular Warden Death or if it requires a player to kill the Warden.
+# True = Players have to manually kill the warden to gain the extra drops
+# False = Drop items on any death. (Drowning, Suffocating etc)
+players-only: true
+
+
+
+
+
+
+
+# ----------------
+# DON'T TOUCH THIS
+# ----------------
+config-version: 1

@@ -9,7 +9,7 @@ public final class WardenDrops extends JavaPlugin {
   public void onEnable() {
     getServer().getPluginManager().registerEvents(new PluginEvents(this),this);
     getConfig().options().copyDefaults(); // Set the config file. (config.yml)
-
+    saveDefaultConfig();
 
     getLogger().info("Plugin has started and is ready to drop stuff.");
     getLogger().info("-------------------");
